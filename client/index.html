@@ -64,7 +64,9 @@
 
     <script>
         var n1 = new Negociacao(new Date(), 23, 34.4) ; 
-        console.log(n1.volume +`-----`+ n1.quantidade) ;
+        n1.data.setDate(15) ;
+
+        console.log(n1.data) ;
     </script>
 </body>
 </html>
