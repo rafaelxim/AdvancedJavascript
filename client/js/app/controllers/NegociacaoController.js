@@ -14,7 +14,9 @@ class NegociacaoController{
 
 		event.preventDefault();
 
-		let data = new Date(this._inputData.value.split('-')) ;
+		let data = new DateHelper().textoParaData(this._inputData.value) ;
+
+		console.log(data) ;
 
 		let negociacao = new Negociacao(
 			data,
@@ -22,7 +24,9 @@ class NegociacaoController{
 			this._inputValor.value
 		); 
 
-		console.log(negociacao) ;
+		let diaMesAno = new DateHelper().dataParaTexto(negociacao.data) ;
+
+		console.log(diaMesAno) ;
 
 	}
 }
