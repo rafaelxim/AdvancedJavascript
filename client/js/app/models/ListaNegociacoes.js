@@ -12,6 +12,7 @@ class ListaNegociacoes{
 
 	get negociacoes(){
 
-		return this._negociacoes ;
+		// Aqui eu crio uma nova lista de negociações através do concat, para que quando alguém tente fazer o push de uma nova lista pelo negociacoes.push, não conseguir acessar o this._negociações, e sim uma cópia do mesmo.
+		return [].concat(this._negociacoes) ;
 	}
 }
