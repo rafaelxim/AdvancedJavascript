@@ -33,6 +33,7 @@ class NegociacoesView{
             
             <tfoot>
                 <td colspan=3></td>
+
                 <td>${
                     (function(){
                                             
@@ -46,6 +47,7 @@ class NegociacoesView{
             </tfoot>
         </table>
         `;
+        // o TD acima pode ser feito com o .reduce em uma linha de código
     }
 
     update(model){
