@@ -1,10 +1,11 @@
-class NegociacoesView{
+class NegociacoesView extends View {
 
     constructor(elemento){
-        this._elemento = elemento ;
+
+        super(elemento);
     }
 
-    _template(model){
+     _template(model){
 
         return `
         <table class="table table-hover table-bordered">
@@ -48,10 +49,6 @@ class NegociacoesView{
         </table>
         `;
         // o TD acima pode ser feito com o .reduce em uma linha de código
-    }
-
-    update(model){
-        this._elemento.innerHTML = this._template(model); 
     }
 }
 
